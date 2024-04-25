@@ -1,0 +1,92 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+}
+
+.container{
+    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    overflow: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.iCon{
+   display: flex;
+   justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+.rInfo{
+    background-color: #e8e8e8;
+    width: 80vw;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.h1a{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.h1a button{
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.h1a button:hover{
+    background-color: #0056b3;
+}
+.formCon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+    
+}
+.form{
+    background-color: whitesmoke;
+    width: 60vw;
+    text-align: center;
+    padding: 25px;
+    border-radius: 15px;
+    gap: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.form input, .form select{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;border: 2px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form button{
+   width: auto;
+   padding: 10px 30px;
+   background-color: #28a745;
+   color: white;
+   border-radius: 5px;
+   border: none;
+   cursor: pointer;
+   transition: background-color 0.3s;
+}
+.form button:hover{
+background-color: #218838;
+}
+
+

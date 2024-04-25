@@ -3,8 +3,9 @@ const pool = require('../pool');
 
 exports.createReservation = (req, res) =>{
 
-    const { resDay, resDate, resTime, customerName, customerPhone, heads} = req.body;
+    const {  resDate, resTime, customerName, customerPhone, heads} = req.body;
 
+    console.log('Request data:',req.body);
 //say every res is 1h30mins, calc end time
 let startTime = new Date(`${resDate}T${resTime}`);
 let endTime = new Date(startTime.getTime() +90 *60000);
@@ -37,10 +38,10 @@ pool.query(overlapCheckQ, [resDate, resTime, resTime], (error, results) => {
     }
 
     //insert res because is valid
-    const sql = `INSERT INTO Reservations (resDay, resDate, resTime, customerName, customerPhone,heads) 
-    VALUES (?,?,?,?,?,?);`;
+    const sql = `INSERT INTO Reservations ( resDate, resTime, customerName, customerPhone,heads) 
+    VALUES (?,?,?,?,?);`;
 
-    pool.query(sql, [resDay, resDate, resTime, customerName, customerPhone, heads], (error, results) =>{
+    pool.query(sql, [resDate, resTime, customerName, customerPhone, heads], (error, results) =>{
         if(error){
             return res.status(500).send('Error while making reservation.');
         }

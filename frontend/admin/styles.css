@@ -1,0 +1,107 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    flex-direction: column;
+}
+.container h1{
+    margin-bottom: 20px;
+}
+.aCon{
+    background-color: whitesmoke;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.aCon form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.aCon label{
+    margin-bottom: 5px;
+}
+.aCon input, .aCon button{
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.aCon button{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+.aCon button:hover{
+    background-color: #0056b3;
+}
+
+
+.con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    flex-direction: column;
+    background: #f4f4f4;
+}
+.con h1{
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#reservationList{
+    width: 80vw;
+    list-style: none;
+    padding: 0;
+    margin:0;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow-y: auto;
+    max-height: 60vh;
+}
+#reservationList li{
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#reservationList li:last-child{
+    border-bottom: none;
+}
+#reservationList button{
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#reservationList button:hover{
+    background-color: #c82333;
+}

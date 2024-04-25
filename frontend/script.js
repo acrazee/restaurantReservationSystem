@@ -73,9 +73,13 @@ document.getElementById('reservationForm').addEventListener('submit', function(e
     const formData = {
         customerName: document.getElementById('customerName').value,
         customerPhone: document.getElementById('customerNumber').value,
-        resDate: document.getElementById('resDate').value,
+        resDate: new Date(document.getElementById('resDate').value).toISOString().split('T')[0],
         resTime: document.getElementById('resTime').value,
-        heads: document.getElementById('heads').value
+        heads: parseInt(document.getElementById('heads').value,10)
     };
+    if (!formData.customerName || !formData.customerPhone || !formData.resDate || !formData.resTime || isNaN(formData.heads)) {
+        alert('Please fill in all fields correctly.');
+        return;
+    }
     submitReservation(formData);
 });

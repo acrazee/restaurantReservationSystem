@@ -9,10 +9,21 @@
 
 <body>
     
+<div class="container">
+    <div class="h1a">
     <h1>Book Your Table!</h1>
     <div class="admin-login">
-        <button onclick="location.href='login.html'">Admin Login</button>
+        <button onclick="location.href='admin/login.html'">Admin Login</button>
     </div>
+    </div>
+<div class="iCon">
+    <div class="rInfo">
+        <h3>MacGrandle's Steaks is open daily and takes reservations from 3:00pm to 9:30pm</h3>
+        <h4>Please completely fill out the form below to create your reservation!</h4>
+    </div>
+</div>
+<div class="formCon">
+    <div class="form">
     <form id="reservationForm">
         <div>
             <label for="customerName">Your Name:</label>
@@ -20,7 +31,7 @@
         </div>
        
         <div>
-            <label for="customerNumber">Phone Number</label>
+            <label for="customerNumber">Phone Number:</label>
             <input type='tel' id="customerNumber" name="
             customerNumber" required>
         </div>
@@ -41,9 +52,12 @@
         </div>
 
         <button type="submit">Submit Reservation</button>
+    </div>
+
 
     </form>
-    
+</div>
+</div>
     <script src="script.js"></script>
 
 
