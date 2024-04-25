@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make a Reservation | MacGrandle's Steak</title>
+    <link rel="stylesheet" href="indexstyle.css">
+</head>
+
+<body>
+    
+    <h1>Book Your Table!</h1>
+    <div class="admin-login">
+        <button onclick="location.href='login.html'">Admin Login</button>
+    </div>
+    <form id="reservationForm">
+        <div>
+            <label for="customerName">Your Name:</label>
+            <input type="text" id="customerName" name="customerName" required>
+        </div>
+       
+        <div>
+            <label for="customerNumber">Phone Number</label>
+            <input type='tel' id="customerNumber" name="
+            customerNumber" required>
+        </div>
+
+        <div>
+            <label for="resDate">Date:</label>
+            <select id="resDate" name ="resDate" required></select>
+        </div>
+
+        <div>
+            <label for="resTime">Time:</label>
+            <select id="resTime" name = "resTime" required></select>
+        </div>
+
+        <div>
+            <label for="heads">Party Size:</label>
+            <select id="heads" name = "heads" required></select>
+        </div>
+
+        <button type="submit">Submit Reservation</button>
+
+    </form>
+    
+    <script src="script.js"></script>
+
+
+
+</body>
+
+
+</html>
