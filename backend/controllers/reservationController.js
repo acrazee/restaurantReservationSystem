@@ -1,9 +1,14 @@
 const { head } = require('../app');
 const pool = require('../pool');
+const sanitizeHtml = require('sanitize-html');
 
 exports.createReservation = (req, res) =>{
 
-    const {  resDate, resTime, customerName, customerPhone, heads} = req.body;
+    let {  resDate, resTime, customerName, customerPhone, heads} = req.body;
+
+
+customerName = sanitizeHtml(customerName);
+customerPhone = sanitizeHtml(customerPhone);
 
     console.log('Request data:',req.body);
 //say every res is 1h30mins, calc end time

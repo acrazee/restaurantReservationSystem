@@ -1,9 +1,11 @@
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const pool = require('../pool');
+const sanitizeHtml = require('sanitize-html');
 
 exports.login= (req, res) =>{
-    const { username, password } = req.body;
+    let { username, password } = req.body;
+    username = sanitizeHtml(username);
     const query = 'SELECT * FROM Admin WHERE username = ?';
     pool.query(query, [username], (error,results) =>{
         if(error){
